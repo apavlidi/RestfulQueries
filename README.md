@@ -14,3 +14,6 @@ RestfulQueries documentation is available [here](https://github.com/apavlidi/Res
 
 Suggestions and/or improvements are welcome!
 
+### Licensing
+This project is licensed under the [MIT License](https://github.com/apavlidi/RestfulQueries/blob/master/LICENSE)
+
