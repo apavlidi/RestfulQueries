@@ -45,6 +45,18 @@ For Maven-based projects, add the following to your pom.xml file. This dependenc
 
 RestfulQueries documentation is available [here](https://github.com/apavlidi/RestfulQueries/wiki/API-Documentation).  
 
+## Contributing
+
+The main purpose of this repository is provide an easy way of implementing truly restful apis by supporting the features of pagination, selection, searching, and sorting to the developers. Development of RestfulQueries happens here on GitHub, and we are grateful to the community for contributing bugfixes and improvements.
+
+### Contributing Guide
+
+Read our [contributing guide](https://github.com/apavlidi/RestfulQueries/wiki/How-to-contribute) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to RestfulQueries.
+
+### Good First Issues
+
+To help you get your feet wet and get you familiar with our contribution process, we have a list of [good first issues](https://github.com/apavlidi/RestfulQueries/issues) that contain bugs or enhancements with relatively limited scope. This is a great place to get started.
+
 ### Feedback
 
 Suggestions and/or improvements are welcome!
