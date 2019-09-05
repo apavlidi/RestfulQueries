@@ -18,28 +18,28 @@ For Maven-based projects, add the following to your pom.xml file. This dependenc
 ```
 
 ## Usage
- 1. Add a map parameter to your Rest Controller.
-<pre>
-    @GetMapping("/profile")
-    private List<Profile> getAllProfiles(<b>@RequestParam Map &lt;String, String> filters</b>) {
+ 1. Add a RequestParam of type Map to your Rest Controller.
+ ```java
+   @GetMapping("/profile")
+    private List<Profile> getAllProfiles(@RequestParam Map <String, String> filters</b>) {
         ....
     }
-</pre>
+  ```
  
  2. Call the <b>collectRestApiParams()</b> inside your controller and pass the RequestParam map.
-<pre>
-    Map&lt;String, String> restApiQueries = collectRestApiParams(filters);
-</pre>
+ ```java
+    Map<String, String> restApiQueries = collectRestApiParams(filters);
+```
 
- 3. Pass the filters to your service/repository and before calling the Spring Data MongoDB API call  <b>applyRestApiQueries()</b> and pass your query variable.
-<pre>
+ 3. Pass the filters to your service/repository and before calling the Spring Data MongoDB API, call <b>applyRestApiQueries()</b> and pass your query variable.
+```java
   @Override
-  public List<Profile> getAllProfilesDemo(Map&lt;String, String> filters) {
+  public List<Profile> getAllProfilesDemo(Map<String, String> filters) {
       Query query = new Query();
       <b>applyRestApiQueries(query, restApiQueries);</b>
       return mongoTemplate.find(query, Profile.class);
   }
-</pre>
+```
 
 ## Documentation
 
