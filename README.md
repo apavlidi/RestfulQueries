@@ -36,7 +36,7 @@ For Maven-based projects, add the following to your pom.xml file. This dependenc
   @Override
   public List<Profile> getAllProfilesDemo(Map<String, String> filters) {
       Query query = new Query();
-      <b>applyRestApiQueries(query, restApiQueries);</b>
+      applyRestApiQueries(query, restApiQueries);
       return mongoTemplate.find(query, Profile.class);
   }
 ```
