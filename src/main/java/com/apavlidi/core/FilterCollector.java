@@ -1,5 +1,11 @@
 package com.apavlidi.core;
 
+import static com.apavlidi.domain.Filters.PAGE;
+import static com.apavlidi.domain.Filters.PAGE_SIZE;
+import static com.apavlidi.domain.Filters.SEARCH;
+import static com.apavlidi.domain.Filters.SELECT;
+import static com.apavlidi.domain.Filters.SORT;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,36 +25,36 @@ public class FilterCollector {
 
   private static void collectQFilter(Map<String, String> restApiQueries,
       Map<String, String> filters) {
-    if (filters.containsKey("q")) {
-      restApiQueries.put("q", filters.get("q"));
+    if (filters.containsKey(SEARCH.getCode())) {
+      restApiQueries.put(SEARCH.getCode(), filters.get(SEARCH.getCode()));
     }
   }
 
   private static void collectPageSizeFilter(Map<String, String> restApiQueries,
       Map<String, String> filters) {
-    if (filters.containsKey("pageSize")) {
-      restApiQueries.put("pageSize", filters.get("pageSize"));
+    if (filters.containsKey(PAGE_SIZE.getCode())) {
+      restApiQueries.put(PAGE_SIZE.getCode(), filters.get(PAGE_SIZE.getCode()));
     }
   }
 
   private static void collectSelectFilter(Map<String, String> restApiQueries,
       Map<String, String> filters) {
-    if (filters.containsKey("select")) {
-      restApiQueries.put("select", filters.get("select"));
+    if (filters.containsKey(SELECT.getCode())) {
+      restApiQueries.put(SELECT.getCode(), filters.get(SELECT.getCode()));
     }
   }
 
   private static void collectPageFilter(Map<String, String> restApiQueries,
       Map<String, String> filters) {
-    if (filters.containsKey("page")) {
-      restApiQueries.put("page", filters.get("page"));
+    if (filters.containsKey(PAGE.getCode())) {
+      restApiQueries.put(PAGE.getCode(), filters.get(PAGE.getCode()));
     }
   }
 
   private static void collectSortFilter(Map<String, String> restApiQueries,
       Map<String, String> filters) {
-    if (filters.containsKey("sort")) {
-      restApiQueries.put("sort", filters.get("sort"));
+    if (filters.containsKey(SORT.getCode())) {
+      restApiQueries.put(SORT.getCode(), filters.get(SORT.getCode()));
     }
   }
 
