@@ -1,10 +1,10 @@
 package com.apavlidi.core;
 
-import static com.apavlidi.domain.Filters.PAGE;
-import static com.apavlidi.domain.Filters.PAGE_SIZE;
-import static com.apavlidi.domain.Filters.SEARCH;
-import static com.apavlidi.domain.Filters.SELECT;
-import static com.apavlidi.domain.Filters.SORT;
+import static com.apavlidi.domain.Filter.PAGE;
+import static com.apavlidi.domain.Filter.PAGE_SIZE;
+import static com.apavlidi.domain.Filter.SEARCH;
+import static com.apavlidi.domain.Filter.SELECT;
+import static com.apavlidi.domain.Filter.SORT;
 
 import com.apavlidi.exceptions.WrongQueryParam;
 import java.util.Map;
@@ -39,7 +39,7 @@ public class FilterApplier {
         query.skip(skip);
       }
     } catch (NumberFormatException pageParamExc) {
-      throw new WrongQueryParam();
+      throw new WrongQueryParam("Page param must be greater than or equal to 0");
     }
   }
 
@@ -54,7 +54,7 @@ public class FilterApplier {
         query.limit(limit);
       }
     } catch (NumberFormatException pageParamExc) {
-      throw new WrongQueryParam();
+      throw new WrongQueryParam("PageSize param must greater than or equal to 0");
     }
   }
 
@@ -70,7 +70,7 @@ public class FilterApplier {
         }
       }
     } catch (JSONException e) {
-      throw new WrongQueryParam();
+      throw new WrongQueryParam("Your JS  ON format is wrong");
     }
   }
 

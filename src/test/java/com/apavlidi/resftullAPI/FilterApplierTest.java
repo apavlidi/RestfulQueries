@@ -1,14 +1,13 @@
 package com.apavlidi.resftullAPI;
 
-
 import static com.apavlidi.core.FilterApplier.applyPageQueryParam;
 import static com.apavlidi.core.FilterApplier.applyPageSizeQueryParam;
 import static com.apavlidi.core.FilterApplier.applySelectQueryParam;
 import static com.apavlidi.core.FilterApplier.applySortQueryParam;
-import static com.apavlidi.domain.Filters.PAGE;
-import static com.apavlidi.domain.Filters.PAGE_SIZE;
-import static com.apavlidi.domain.Filters.SELECT;
-import static com.apavlidi.domain.Filters.SORT;
+import static com.apavlidi.domain.Filter.PAGE;
+import static com.apavlidi.domain.Filter.PAGE_SIZE;
+import static com.apavlidi.domain.Filter.SELECT;
+import static com.apavlidi.domain.Filter.SORT;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -21,7 +20,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.data.mongodb.core.query.Query;
 
 public class FilterApplierTest {
-
 
   @Test
   public void applyPageQueryParam_shouldApplySkipParamOnTheQuery() {
@@ -44,8 +42,8 @@ public class FilterApplierTest {
     Query query = new Query();
     Map<String, String> restApiQueries = new HashMap<>();
     restApiQueries.put(PAGE.getCode(), "-1");
-    assertThrows(WrongQueryParam.class,
-        () -> applyPageQueryParam(query, restApiQueries));
+
+    assertThrows(WrongQueryParam.class, () -> applyPageQueryParam(query, restApiQueries));
   }
 
   @Test
@@ -69,8 +67,7 @@ public class FilterApplierTest {
     Query query = new Query();
     Map<String, String> restApiQueries = new HashMap<>();
     restApiQueries.put(PAGE_SIZE.getCode(), "-1");
-    assertThrows(WrongQueryParam.class,
-        () -> applyPageSizeQueryParam(query, restApiQueries));
+    assertThrows(WrongQueryParam.class, () -> applyPageSizeQueryParam(query, restApiQueries));
   }
 
   @Test
@@ -121,5 +118,4 @@ public class FilterApplierTest {
     assertThat(query.getSortObject(), IsMapContaining.hasKey("created"));
     assertThat(query.getSortObject().get("created"), is(-1));
   }
-
 }

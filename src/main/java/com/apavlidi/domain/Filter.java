@@ -1,6 +1,6 @@
 package com.apavlidi.domain;
 
-public enum Filters {
+public enum Filter {
   PAGE_SIZE("pageSize"),
   PAGE("page"),
   SEARCH("q"),
@@ -9,7 +9,7 @@ public enum Filters {
 
   private String code;
 
-  Filters(String code) {
+  Filter(String code) {
     this.code = code;
   }
 

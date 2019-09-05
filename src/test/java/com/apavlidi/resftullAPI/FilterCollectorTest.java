@@ -2,11 +2,11 @@ package com.apavlidi.resftullAPI;
 
 
 import static com.apavlidi.core.RestFullAPI.collectRestApiParams;
-import static com.apavlidi.domain.Filters.PAGE;
-import static com.apavlidi.domain.Filters.PAGE_SIZE;
-import static com.apavlidi.domain.Filters.SEARCH;
-import static com.apavlidi.domain.Filters.SELECT;
-import static com.apavlidi.domain.Filters.SORT;
+import static com.apavlidi.domain.Filter.PAGE;
+import static com.apavlidi.domain.Filter.PAGE_SIZE;
+import static com.apavlidi.domain.Filter.SEARCH;
+import static com.apavlidi.domain.Filter.SELECT;
+import static com.apavlidi.domain.Filter.SORT;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.MatcherAssert.assertThat;
