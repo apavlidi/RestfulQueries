@@ -4,9 +4,119 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>test</groupId>
-  <artifactId>test</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <artifactId>restfulQueries</artifactId>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.0</version>
+      </plugin>
+      <plugin>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <configuration>
+          <autoReleaseAfterClose>true</autoReleaseAfterClose>
+          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+          <serverId>ossrh</serverId>
+        </configuration>
+        <extensions>true</extensions>
+        <groupId>org.sonatype.plugins</groupId>
+        <version>1.6.7</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>jar-no-fork</goal>
+            </goals>
+            <id>attach-sources</id>
+          </execution>
+        </executions>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>2.2.1</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <id>attach-javadocs</id>
+          </execution>
+        </executions>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>2.9.1</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+          </execution>
+        </executions>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>1.5</version>
+      </plugin>
+      <plugin>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <configuration>
+          <autoReleaseAfterClose>true</autoReleaseAfterClose>
+          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+          <serverId>ossrh</serverId>
+        </configuration>
+        <extensions>true</extensions>
+        <groupId>org.sonatype.plugins</groupId>
+        <version>1.6.7</version>
+      </plugin>
+    </plugins>
+  </build>
+  <description>Develop true restful APIs by supporting pagination, filtering, selection, sorting and
+    searching. This project helps you add these featrues to your REST Controller easily without
+    developing custom solutions. The project is currently only compatible with Spring Boot + Spring
+    Data MongoDB applications.
+  </description>
+
+  <developers>
+    <developer>
+      <email>aleksispavlidis@gmail.com</email>
+      <name>Alexis Pavlidis</name>
+      <organization>com.github.apavlidi</organization>
+      <organizationUrl>https://apavlidi.github.io/</organizationUrl>
+    </developer>
+  </developers>
+  <distributionManagement>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+  <groupId>com.github.apavlidi</groupId>
+
+  <licenses>
+    <license>
+      <name>The Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <name>RestfulQueries</name>
+
+  <scm>
+    <connection>scm:git:git://github.com/apavlidi/RestfulQueries.git</connection>
+    <developerConnection>scm:git:ssh://github.com:apavlidi/RestfulQueries.git</developerConnection>
+    <url>https://github.com/apavlidi/RestfulQueries</url>
+  </scm>
+
+  <url>https://github.com/apavlidi/RestfulQueries</url>
 
   <properties>
     <java.version>1.8</java.version>
@@ -14,14 +124,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.22.0</version>
-      </plugin>
-    </plugins>
-  </build>
+  <version>0.0.1</version>
 
   <dependencies>
     <dependency>
