@@ -1,11 +1,7 @@
 # RestfulQueries [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/apavlidi/RestfulQueries/wiki/How-to-contribute) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.apavlidi/restfulQueries/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.apavlidi/restfulQueries)
 
-Develop true restful APIs by supporting pagination, filtering, selection, sorting and filtering. This project helps you add these featrues to your REST Controller easily without developing custom solutions.
-The project is currently only compatible with Spring Boot + Spring Data MongoDB applications.
-
-## Requirements
-* Spring Boot
-* Spring Data MongoDB
+Develop true restful APIs by supporting pagination, filtering, selection, sorting and filtering. This project helps you add these features to your REST Controller easily without developing custom solutions.
+The project is currently only compatible with Spring Data MongoDB applications.
 
 ## Getting Started
 For Maven-based projects, add the following to your pom.xml file. This dependency is available from the Maven Central repository.
