@@ -1,6 +1,6 @@
 # RestfulQueries [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/apavlidi/RestfulQueries/wiki/How-to-contribute) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.apavlidi/restfulQueries/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.apavlidi/restfulQueries)
 
-Develop true restful APIs by supporting pagination, filtering, selection, sorting and searching. This project helps you add these featrues to your REST Controller easily without developing custom solutions.
+Develop true restful APIs by supporting pagination, filtering, selection, sorting and filtering. This project helps you add these featrues to your REST Controller easily without developing custom solutions.
 The project is currently only compatible with Spring Boot + Spring Data MongoDB applications.
 
 ## Requirements
@@ -41,6 +41,7 @@ For Maven-based projects, add the following to your pom.xml file. This dependenc
       return mongoTemplate.find(query, Profile.class);
   }
 ```
+Navigate to API Documentation for [more](https://github.com/apavlidi/RestfulQueries/wiki/API-Documentation)
 
 ## Documentation
 
@@ -48,7 +49,7 @@ RestfulQueries documentation is available [here](https://github.com/apavlidi/Res
 
 ## Contributing
 
-The main purpose of this repository is provide an easy way of implementing truly restful apis by supporting the features of pagination, selection, searching, and sorting to the developers. Development of RestfulQueries happens here on GitHub, and we are grateful to the community for contributing bugfixes and improvements.
+The main purpose of this repository is provide an easy way of implementing truly restful apis by supporting the features of pagination, selection, filtering, and sorting to the developers. Development of RestfulQueries happens here on GitHub, and we are grateful to the community for contributing bugfixes and improvements.
 
 ### Contributing Guide
 
