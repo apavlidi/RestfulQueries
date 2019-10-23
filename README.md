@@ -49,11 +49,11 @@ The main purpose of this repository is provide an easy way of implementing truly
 
 ### Contributing Guide
 
-Read our [contributing guide](https://github.com/apavlidi/RestfulQueries/wiki/How-to-contribute) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to RestfulQueries.
+Read the [contributing guide](https://github.com/apavlidi/RestfulQueries/wiki/How-to-contribute) to learn about the development process, how to propose bugfixes and improvements, and how to build and test your changes to RestfulQueries.
 
 ### Good First Issues
 
-To help you get your feet wet and get you familiar with our contribution process, we have a list of [good first issues](https://github.com/apavlidi/RestfulQueries/issues) that contain bugs or enhancements with relatively limited scope. This is a great place to get started.
+To help you get your feet wet and get you familiar with the contribution process, check the issues for [good first issues](https://github.com/apavlidi/RestfulQueries/issues) that contain bugs or enhancements with relatively limited scope. This is a great place to get started.
 
 ### Feedback
 
