@@ -2,6 +2,7 @@
 
 Develop true restful APIs by supporting pagination, filtering, selection, sorting and filtering. This project helps you add these features to your REST Controller easily without developing custom solutions.
 The project is currently only compatible with Spring Data MongoDB applications.
+There is a blog post [here](https://dev.to/apavlidi/how-to-support-filters-to-your-restful-apis-with-spring-data-mongodb-355a), where I describe step-by-step the implementation of this library.
 
 ## Getting Started
 For Maven-based projects, add the following to your pom.xml file. This dependency is available from the Maven Central repository.
