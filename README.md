@@ -19,7 +19,7 @@ For Maven-based projects, add the following to your pom.xml file. This dependenc
  1. Add a RequestParam of type Map to your Rest Controller.
  ```java
    @GetMapping("/profile")
-    private List<Profile> getAllProfiles(@RequestParam Map <String, String> filters</b>) {
+    private List<Profile> getAllProfiles(@RequestParam Map <String, String> filters) {
         ....
     }
   ```
